@@ -118,6 +118,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Specify the static folder path here
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+# here Moving the static folder content  to the folder name asssets for processing
+STATIC_ROOT = os.path.join(BASE_DIR , 'assets')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
