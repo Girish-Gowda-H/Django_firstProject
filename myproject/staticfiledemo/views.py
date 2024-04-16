@@ -25,6 +25,11 @@ def index(request):
     car3.id = 3
     car3.name = 'c'
     car3.img = 'br3.png'
+
+    car4 = car()
+    car3.id = 3
+    car3.name = 'c'
+    car3.img = 'br3.png'
     
     cars = [car1,car2,car3]
 

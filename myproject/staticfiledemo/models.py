@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class brands:
+class car:
     id: int
     name: str
     brand: str

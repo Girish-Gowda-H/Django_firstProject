@@ -72,10 +72,12 @@
 			<div class="container">
 				<div class="section-header">
 					{% for car in cars %}
+					{% if car.id > 1 %}
 					<div>
 					<p>{{car.name}}</p><br>
 					<img src="{{baseurl}}/{{car.img}}" alt="">
 					</div>
+					{% endif %}
 					{% endfor %}
 				</div>
 				<div class="new-cars-content">
