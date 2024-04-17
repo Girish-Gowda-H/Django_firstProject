@@ -64,20 +64,17 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 	
-		
-
-
 		<!--new-cars start -->
 		<section id="new-cars" class="new-cars">
 			<div class="container">
 				<div class="section-header">
 					{% for car in cars %}
-					{% if car.id > 1 %}
+					
 					<div>
-					<p>{{car.name}}</p><br>
-					<img src="{{baseurl}}/{{car.img}}" alt="">
+					<p>{{car.name}} <br> {{car.brand}} <br> {{car.img}}</p><br>
+					<img src="{{car.img.url}}" alt="">
 					</div>
-					{% endif %}
+		
 					{% endfor %}
 				</div>
 				<div class="new-cars-content">
