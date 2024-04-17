@@ -8,3 +8,4 @@ class car(models.Model):
     img = models.ImageField(upload_to='pics')
     desc = models.TextField()
     offer = models.BooleanField(default=False)
+    abc = models.IntegerField()
