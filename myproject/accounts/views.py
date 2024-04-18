@@ -18,7 +18,8 @@ def register(request):
             else:
                 user = User.objects.create_user(username = username, password = password1, first_name = first_name)
                 user.save()
-                print('user created')   
+                print('user created') 
+                return redirect('login')  
         else:
             messages.info(request,"password not matching")
             return redirect('register')
@@ -26,3 +27,22 @@ def register(request):
 
     else:
         return render(request, 'register.html')
+    
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username = username, password = password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect("/")
+        else:
+            messages.info(request, 'invalid credentials')
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
+
+    
