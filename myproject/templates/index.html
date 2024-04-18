@@ -72,11 +72,14 @@
 					
 					<div>
 					<p>{{car.name}} <br> {{car.brand}} <br> {{car.img}}</p><br>
-					<img src="{{car.img.url}}" alt="">
+					<img style="height: 100px;" src="{{car.img.url}}" alt="">
 					</div>
 		
 					{% endfor %}
-				</div>
+				</div><br>
+				<button class="welcome-btn new-cars-btn" onclick="window.location.href='accounts/register'">
+					Register
+				</button>
 				<div class="new-cars-content">
 					<div class="owl-carousel owl-theme" id="new-cars-carousel">
 						<div class="new-cars-item">
